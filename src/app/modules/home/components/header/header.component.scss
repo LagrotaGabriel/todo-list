@@ -1,0 +1,10 @@
+@import '../../../../../dist/css/variables.scss';
+
+.titulo {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $secondary-text-color;
+    background-color: $tertiary-background-color;
+}
