@@ -24,4 +24,13 @@ export class TodoListComponent implements DoCheck{
   adicionaNovoItem(item: string) {
     this.taskList.push({ task: item, checked: false });
   }
+
+  validaAlteracaoItem(item: string, index: number) {
+    if (!item) {
+      const confirm = window.confirm('Task vazia. Deseja deletar?')
+      if(confirm) {
+        this.removerItem(index);
+      }
+    }
+  }
 }

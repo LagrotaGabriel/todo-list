@@ -2,7 +2,7 @@
   <ul *ngIf="taskList.length">
     <li *ngFor="let item of taskList; let i = index;">
       <input type="checkbox" [(ngModel)]="item.checked"/>
-      <input type="text" [(ngModel)]="item.task"/>
+      <input type="text" (keyup)="validaAlteracaoItem(item.task, i)" [(ngModel)]="item.task"/>
       <button (click)="removerItem(i)">X</button>
     </li>
   </ul>
