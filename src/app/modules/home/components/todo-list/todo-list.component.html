@@ -3,10 +3,10 @@
     <li *ngFor="let item of taskList; let i = index;">
       <input type="checkbox" [(ngModel)]="item.checked"/>
       <input type="text" [(ngModel)]="item.task"/>
-      <button>X</button>
+      <button (click)="removerItem(i)">X</button>
     </li>
   </ul>
 </section>
 
 <app-todo-input-add-itens></app-todo-input-add-itens>
-<app-todo-button-delete-all></app-todo-button-delete-all>
+<app-todo-button-delete-all *ngIf="taskList.length" (click)="removerTodosOsItens()"></app-todo-button-delete-all>

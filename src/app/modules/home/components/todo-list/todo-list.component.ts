@@ -7,8 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./todo-list.component.scss'],
 })
 export class TodoListComponent {
-  public taskList: Array<TaskList> = [
-    { task: 'Ir no mercado', checked: true },
-    { task: 'Comprar sorvete', checked: false },
-  ];
+  public taskList: Array<TaskList> = [];
+
+  removerItem(index: number) {
+    this.taskList.splice(index, 1);
+  }
+
+  removerTodosOsItens() {
+    this.taskList = [];
+  }
+
 }
+
+
