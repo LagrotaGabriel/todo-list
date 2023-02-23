@@ -17,6 +17,7 @@ export class TodoListComponent {
     this.taskList = [];
   }
 
+  adicionaNovoItem(item: string) {
+    this.taskList.push({ task: item, checked: false });
+  }
 }
-
-

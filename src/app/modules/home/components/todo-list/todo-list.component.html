@@ -8,5 +8,5 @@
   </ul>
 </section>
 
-<app-todo-input-add-itens></app-todo-input-add-itens>
+<app-todo-input-add-itens (enviarNovoItem)="adicionaNovoItem($event)"></app-todo-input-add-itens>
 <app-todo-button-delete-all *ngIf="taskList.length" (click)="removerTodosOsItens()"></app-todo-button-delete-all>
