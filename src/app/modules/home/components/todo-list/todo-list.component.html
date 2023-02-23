@@ -1,18 +1,11 @@
-<section>
-
-    <ul>
-
-        <li>
-            <input type="checkbox">
-            <input type="text">
-
-            <button>
-                X
-            </button>
-        </li>
-
-    </ul>
-
+<section [ngClass]="{'wallpaper': !taskList.length}">
+  <ul *ngIf="taskList.length">
+    <li *ngFor="let item of taskList; let i = index;">
+      <input type="checkbox" [(ngModel)]="item.checked"/>
+      <input type="text" [(ngModel)]="item.task"/>
+      <button>X</button>
+    </li>
+  </ul>
 </section>
 
 <app-todo-input-add-itens></app-todo-input-add-itens>
